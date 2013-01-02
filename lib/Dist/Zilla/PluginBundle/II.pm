@@ -1,5 +1,5 @@
 package Dist::Zilla::PluginBundle::II;
-# ABSTRACT: basic pluginbundle for internal use
+# ABSTRACT: basic pluginbundle for Infinity Interactive dists
 
 use Moose;
 use Dist::Zilla;
