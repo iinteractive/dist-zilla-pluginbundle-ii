@@ -69,6 +69,16 @@ sub configure {
         'Git::NextVersion',
         'Git::Tag',
     );
+
+    ## always dep on Test::More 0.88, for done_testing()
+    # do this manually here rather than figuring how to do deal with moniker
+    # argument in plugin_options builder.
+    $self->add_plugins([ "Prereqs" => "TestMoreDoneTesting" => {
+      -phase       => 'test' ,
+      -type        => 'requires',
+      'Test::More' => '0.88',
+    }]);
+
     $self->add_plugins(
         map { [ $_ => ($self->plugin_options->{$_} || {}) ] } @plugins
     );
