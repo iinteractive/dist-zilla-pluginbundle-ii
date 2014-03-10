@@ -61,7 +61,7 @@ sub configure {
 
         # external plugins
         'CheckChangesHasContent',
-        'NoTabsTests',
+        'Test::NoTabs',
         'EOLTests',
         'Test::Compile',
         'Git::Check',
